@@ -15,7 +15,7 @@ html, body, div {
 body {
     margin-top: 0px;
     background-image: url("images/Background_Image_Desktop.png");
-    background-size: auto;
+    background-size: cover;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
