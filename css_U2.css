@@ -263,15 +263,16 @@ a:hover{
         grid-area: IMG;
         margin: 30px auto 30px auto;
     }
-
-    a { 
+    
+    a {
         max-width: 300px; 
         max-height: 300px;
+        height: auto;
+        margin: 10px auto 90px auto;
         grid-area: IMG;
-        padding: auto auto auto auto;
-        margin: auto
-         auto auto auto;
+        
     }
+    
 
     #IMG:hover {
         transition: none;
@@ -413,7 +414,13 @@ a:hover{
         grid-area: IMG;
         margin: 30px auto 10px auto;
         padding: 20px 0 20px 0;
-
+    }
+    
+    a {
+        min-width: 50px;
+        width: 100%;
+        height: auto;
+        margin: 10px auto 100px auto;
     }
 
     #IMG:hover {
