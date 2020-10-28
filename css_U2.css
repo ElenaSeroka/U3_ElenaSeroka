@@ -158,11 +158,6 @@ a:hover{
         background-image: url("images/Background_Image_Mobile.png");
         background-size: cover;
 }
-
-#IMG {
-    display: none;
-}
-
 }
 
 /*-----------------------MEDIA QUERY 2-----------------------*/
