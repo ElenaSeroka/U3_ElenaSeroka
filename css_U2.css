@@ -14,8 +14,11 @@ html, body, div {
 
 body {
     margin-top: 0px;
+    height: 100%;
+    padding-bottom: 1rem;
     background-image: url("images/Background_Image_Desktop.png");
     background-size: cover;
+    background-repeat: no-repeat;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -79,8 +82,12 @@ h1 {
     color: #f6f3ee;
     font-size: 75px;
     min-height: auto;
-    margin: 140px 0px 0px 100px;
+    margin: 140px auto 50px auto;
     grid-area: h1;  
+}
+
+#H1Sida3{
+    text-align: center;
 }
 
 h2 {
@@ -93,83 +100,80 @@ p {
 
 #grid-areas {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: min-content min-content;
+    padding: 3rem;
     grid-template-areas:
-    "h1 h1 h1"
-    "answ1 answ2 IMG"
+    ". h1 ."
+    "answ1 IMG answ2";
 }
 
-#answ1 {
+.answ {
     background-color: #ffffff;
     max-width: 400px;
     min-width: 300px;
     border-radius: 14px;
-    margin: 45px 50px 50px 100px;
-    grid-area: answ1;
+    margin: 1rem auto;
     border: 10px solid rgb(251, 68, 114);
+}
+
+
+#answ1 {
+    grid-area: answ1;
 }
 
 #answ2 {
-    background-color: #ffffff;
-    max-width: 400px;
-    min-width: 300px;
-    border-radius: 14px;
-    margin: 45px 50px 50px 0px;
     grid-area: answ2;
-    border: 10px solid rgb(251, 68, 114);
 }
 
 #IMG {
-    max-width: 500px;
-    min-width: 250px;
-    width: 100%;
-    height: auto;
-    grid-area: IMG;
-    margin: 40px 30px 0px 0px;
-    transition: transform 1s;
-    transition-timing-function: ease-in-out;
-}
-
-a {
     max-width: 450px;
     min-width: 250px;
-    width: 100%;
-    height: auto;
     grid-area: IMG;
-    margin: 80px 30px 0px 0px;
+    margin: 6rem auto;
     transition: transform 1s;
     transition-timing-function: ease-in-out;
 }
 
+#IMG2, a {
+    max-width: 450px;
+    min-width: 250px;
+    grid-area: IMG;
+    margin: 4rem auto;
+    transition: transform 1s;
+    transition-timing-function: ease-in-out;
 
-#IMG:hover {
-    transform: scale(1.2);
 }
 
-a:hover{
-     transform: scale(1.1);
+#IMG:hover, a:hover {
+    transform: scale(1.1);
 }
+
+
 
 /*-----------------------MEDIA QUERY 1-----------------------*/
 /*---------------------------Half-page-----------------------*/
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1380px) {
     body{
         background-image: url("images/Background_Image_Mobile.png");
-        background-size: cover;
+        background-size: cover;     
+}
+
+#grid-areas {
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+    "h1 h1"
+    "answ1 answ2"
+    "IMG IMG"
 }
 }
+
 
 /*-----------------------MEDIA QUERY 2-----------------------*/
 /*---------------------------iPad-----------------------*/
 
-@media screen and (max-width: 768px) {
-
-    body {
-    background-image: url("images/Background_Image_Mobile.png");
-    background-size: cover;
-    }
-
+@media screen and (max-width: 900px) {
     #bar {
         display:flex;
         flex-direction: row;
@@ -178,7 +182,6 @@ a:hover{
     nav ul {
         width: 100%;
         gap: 60px;
-    
     }
     
     nav a:link, nav a:visited {
@@ -190,41 +193,34 @@ a:hover{
     }
   
     #grid-areas {
-        display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: min-content min-content min-content;
         grid-template-areas:
         "h1 h1"
         "answ1 answ2"
-        "IMG IMG"
+        "IMG IMG";
     }   
 
     h1 {
         font-size:50px;
         margin: 125px auto 40px auto;
-        grid-area: h1;
         text-align: center;
     }
     
-    
-    #answ1 { 
+    .answ {
         max-width: 300px;
         min-width: 190px;
         min-height: 100%;
         margin: auto 10px auto auto;  
-        grid-area: answ1;
         border: 8px solid rgb(251, 68, 114);
-        font-size:12px;
+        font-size:12px; 
+    }
+    #answ1 { 
+        margin: auto 10px auto auto;  
     }
 
     #answ2 {
-        max-width: 300px;
-        min-width: 190px;
-        min-height: 100%;
         margin: auto auto auto 10px;  
-        grid-area: answ2;
-        border: 8px solid rgb(251, 68, 114);
-        font-size:12px;
     }
 
     h2 {
@@ -235,37 +231,23 @@ a:hover{
         text-align: center;    
     }
     
-    #IMG { 
+    #IMG, a { 
         max-width: 300px; 
         max-height: 300px;
-        grid-area: IMG;
         margin: 30px auto 30px auto;
     }
     
-    a {
-        max-width: 300px; 
-        max-height: 300px;
-        margin: 10px auto 90px auto;
-        grid-area: IMG;  
-    }
-    
-
-    #IMG:hover {
+    #IMG:hover, a:hover {
         transition: none;
         transform: none;
     }
-
-    a:hover{
-        transition: none;
-        transform: none;
-}
 
 }
 
 /*-----------------------MEDIA QUERY 3-----------------------*/
 /*------------------------Android 7.0-----------------------*/
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 580px) {
 
     #menuicon {
         background-image: url(/images/menuIcon.png);
@@ -310,41 +292,38 @@ a:hover{
     }
 
     #grid-areas {
-        display: grid;
         grid-template-columns: auto;
         grid-template-rows: min-content auto auto auto;
         grid-template-areas:
         "h1"
         "answ1"
         "answ2"
-        "IMG"
+        "IMG";
     }   
 
     h1 {     
             
             font-size:30px;
             margin: 100px auto 30px auto;
-            grid-area: h1;
     }
 
-    #answ1 {
+    .answ {
         max-width: 250px;
         height: auto;
         width: 100%;
         border-radius: 14px;
         margin: auto auto 20px auto;
-        grid-area: answ1;
         border: 8px solid rgb(251, 68, 114);
         font-size:12px;
     }
 
+    #answ1 {
+        margin: auto auto 20px auto;
+    }
+
     #answ2 {
-        max-width: 250px;
-        height: auto;
-        width: 100%;
         margin: 25px auto auto auto;
         padding: 0 0 20px 0; 
-        grid-area: answ2;
     }
 
     h2 {
@@ -355,22 +334,15 @@ a:hover{
         margin: 20px;
     }
 
-    #IMG { 
+    #IMG, a { 
         min-width: 50px;
         width: 100%;
         height: auto;
-        grid-area: IMG;
         margin: 30px auto 10px auto;
         padding: 20px 0 20px 0;
     }
-    
-    a {
-        min-width: 50px;
-        width: 100%;
-        height: auto;
-        margin: 10px auto 100px auto;
-    } 
 }
+
 
 
 
