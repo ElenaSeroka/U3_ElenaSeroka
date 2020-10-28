@@ -144,15 +144,28 @@ a {
 
 
 #IMG:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 a:hover{
      transform: scale(1.1);
 }
 
-
 /*-----------------------MEDIA QUERY 1-----------------------*/
+/*---------------------------Half-page-----------------------*/
+@media screen and (max-width: 1500px) {
+    body{
+        background-image: url("images/Background_Image_Mobile.png");
+        background-size: cover;
+}
+
+#IMG {
+    display: none;
+}
+
+}
+
+/*-----------------------MEDIA QUERY 2-----------------------*/
 /*---------------------------iPad-----------------------*/
 
 @media screen and (max-width: 768px) {
@@ -163,47 +176,22 @@ a:hover{
     }
 
     #bar {
-        background-image: linear-gradient(to right, rgb(247, 46, 140) ,rgb(251, 68, 114), rgb(255, 136, 0));
-        position: fixed;
-        width: 100%;
-        height: 90px;
         display:flex;
         flex-direction: row;
-        top: 0; /* Position the navbar at the top of the page */
-        /* z-index: 100; */
     }
     
     nav ul {
-        list-style: none;
-        margin: 17px 0px 0px 0px;
-        padding: 0; 
         width: 100%;
-        display:flex;
-        flex-direction: row;
-        justify-content:space-evenly;
         gap: 60px;
     
     }
     
     nav a:link, nav a:visited {
-        background-color: rgb(255, 255, 255);
-        color: #272727;
-        padding: 15px 25px 15px 25px;
-        border-radius: 40px;
-        box-shadow: 0 0 6px 2px rgb(54, 53, 53);
         margin: 0px auto 0px auto;
-        font-size: 30px;
-        text-decoration: none;
     }      
     
     nav a:hover, nav a:active {
-        background-color: rgb(93, 92, 92);
-        color: #faf6f6;
-        padding: 15px 25px 15px 25px;
-        border-radius: 40px;
-        box-shadow: 0 0 6px 2px rgb(54, 53, 53);
         margin: 0px auto 0px auto;
-        font-size: 30px;
     }
   
     #grid-areas {
@@ -217,7 +205,6 @@ a:hover{
     }   
 
     h1 {
-        color: #f6f3ee;
         font-size:50px;
         margin: 125px auto 40px auto;
         grid-area: h1;
@@ -225,12 +212,10 @@ a:hover{
     }
     
     
-    #answ1 {
-        background-color: #ffffff;
+    #answ1 { 
         max-width: 300px;
         min-width: 190px;
         min-height: 100%;
-        border-radius: 14px;
         margin: auto 10px auto auto;  
         grid-area: answ1;
         border: 8px solid rgb(251, 68, 114);
@@ -238,11 +223,9 @@ a:hover{
     }
 
     #answ2 {
-        background-color: #ffffff;
         max-width: 300px;
         min-width: 190px;
         min-height: 100%;
-        border-radius: 14px;
         margin: auto auto auto 10px;  
         grid-area: answ2;
         border: 8px solid rgb(251, 68, 114);
@@ -267,10 +250,8 @@ a:hover{
     a {
         max-width: 300px; 
         max-height: 300px;
-        height: auto;
         margin: 10px auto 90px auto;
-        grid-area: IMG;
-        
+        grid-area: IMG;  
     }
     
 
@@ -286,15 +267,10 @@ a:hover{
 
 }
 
-/*-----------------------MEDIA QUERY 2-----------------------*/
+/*-----------------------MEDIA QUERY 3-----------------------*/
 /*------------------------Android 7.0-----------------------*/
 
 @media screen and (max-width: 360px) {
-
-    body {
-        background-image: url(/images/Background_Image_Mobile.png);
-        background-size: cover;
-    }
 
     #menuicon {
         background-image: url(/images/menuIcon.png);
@@ -316,11 +292,7 @@ a:hover{
     
     nav ul {
         width: 80%;
-        list-style: none;
         margin: 10px 0px 0px auto; 
-        display:flex;
-        flex-direction: row;
-        justify-content:space-evenly;
         gap: 5px;
     }
 
@@ -333,25 +305,13 @@ a:hover{
     }
         
     nav a:link, nav a:visited {
-        background-color: rgb(255, 255, 255);
-        color: #272727;
         padding: 15px 20px 15px 20px;
-        border-radius: 40px;
-        box-shadow: 0 0 6px 2px rgb(54, 53, 53);
         font-size: 100%;
     }
         
     nav a:hover, nav a:active{
-        background-color: rgb(93, 92, 92);
-        color: #faf6f6;
         padding: 15px 20px 15px 20px;
-        border-radius: 40px;
-        box-shadow: 0 0 6px 2px rgb(54, 53, 53);
         font-size: 100%;;
-    }
-
-    .thisPage {
-        text-decoration: underline;
     }
 
     #grid-areas {
@@ -366,14 +326,13 @@ a:hover{
     }   
 
     h1 {     
-            color: #f6f3ee;
+            
             font-size:30px;
             margin: 100px auto 30px auto;
             grid-area: h1;
     }
 
     #answ1 {
-        background-color: #ffffff;
         max-width: 250px;
         height: auto;
         width: 100%;
@@ -385,25 +344,19 @@ a:hover{
     }
 
     #answ2 {
-        background-color: #ffffff;
         max-width: 250px;
         height: auto;
         width: 100%;
-        border-radius: 14px;
         margin: 25px auto auto auto;
         padding: 0 0 20px 0; 
         grid-area: answ2;
-        border: 8px solid rgb(251, 68, 114);
-        font-size:12px;
     }
 
     h2 {
-        text-align: center;
         margin: 20px;
     }
 
     p{
-        text-align: center;
         margin: 20px;
     }
 
@@ -421,12 +374,7 @@ a:hover{
         width: 100%;
         height: auto;
         margin: 10px auto 100px auto;
-    }
-
-    #IMG:hover {
-        transition: none;
-        transform: none;
-    }  
+    } 
 }
 
 
