@@ -99,15 +99,9 @@ nav a:hover, nav a:active {
 }
 
 
-#imgFacebook {
-    width: 60px;
- margin: auto auto auto 250px;
-}
-
-
- #imgInstagram {
-    width: 60px;
- margin: auto auto auto 70px;
+#imgFacebook, #imgInstagram {
+    width: 70px;
+    gap: 10px;
 }
 
 h2 {
