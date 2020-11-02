@@ -25,37 +25,13 @@ body {
 
 
 /* 
-#grid-areas {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 300px 200px 200px;
-    grid-template-areas:
-    "homebar homebar homebar"
-    "header header header"
-    "globalBar globalBar globalBar"
-    " textBox textBox asideright"
-    "footer footer footer"
-}
 
-#homeBar {
-    background-color: rgb(78, 77, 77);
-    position: fixed;
-    width: 100%;
-    height: 140px;
-    top: 0;
-    z-index: 1;
-    grid-area: homebar;
-}
 
-#imgLogo{
-width: 100px;
-height: 100%;
-top: 0;
-}
 
-#header {
-    grid-area: header;
-} */
+
+
+
+ */
 
 
 /*
@@ -68,12 +44,7 @@ top: 0;
     display:none;
 }
  
-.asideRight{
-    background-color: rgb(233, 159, 159);
-    position: absolute;
-  z-index: 0;
-  grid-area: asideright;
-}
+
 
 #påGång, #besök, #prataMedOss{
     background-color: #faf6f6;
@@ -89,9 +60,7 @@ grid-area: textBox;
 
 }
 
-.footer{
-    background-color: rgb(78, 77, 77);
-    grid-area: footer;
+
 } */
 
 
