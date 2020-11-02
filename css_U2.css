@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* ----- Grundstil för webbsidan ----- */
-
 html {
     font-size: 16px;
 }
@@ -10,33 +8,32 @@ html, body, div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-
 body {
-    margin-top: 0px;
     height: 100%;
-    padding-bottom: 1rem;
-    background-image: url("images/Background_Image_Desktop.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#bar {
-    background-image: linear-gradient(to right, rgb(247, 46, 140) ,rgb(251, 68, 114), rgb(255, 136, 0));
-    position: fixed;
-    width: 100%;
-    height: 90px;
-    top: 0; /* Position the navbar at the top of the page */
+#globalBar {
+    background-color: rgb(78, 77, 77);
+    position: absolute;
+    width:100%;
+    height: auto;
+    grid-area: globalBar;
 }
- 
-#menucheckbox {
-    display:none;
+
+#imgFacebook, #imgInstagram{
+    width:50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
+
 
 nav ul {
     list-style: none;
-    margin: 17px 0px 0px 0px;
+    margin: 0px;
     padding: 0; 
     display:flex;
     flex-direction: row;
@@ -46,303 +43,18 @@ nav ul {
 }
 
 nav a:link, nav a:visited {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(78, 77, 77);
     color: #272727;
-    padding: 15px 25px 15px 25px;
-    border-radius: 40px;
-    box-shadow: 0 0 6px 2px rgb(54, 53, 53);
-    margin: 0px 20px 0px 20px;
-    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
     text-decoration: none;
 }      
 
 nav a:hover, nav a:active {
     background-color: rgb(93, 92, 92);
     color: #faf6f6;
-    padding: 15px 25px 15px 25px;
-    border-radius: 40px;
-    box-shadow: 0 0 6px 2px rgb(54, 53, 53);
-    margin: 0px 20px 0px 20px;
-    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
 }
-
-.navtext {
-    margin: 10px 0px 10px 0px;
-}
-
-.navtext1{
-    margin: 10px 0px 10px 10px;
-}
-
-.thisPage {
-    text-decoration: underline;
-}
-
-h1 {
-    color: #f6f3ee;
-    font-size: 75px;
-    min-height: auto;
-    margin: 140px auto 50px auto;
-    grid-area: h1;  
-}
-
-#H1Sida3{
-    text-align: center;
-}
-
-h2 {
-    margin: 25px;
- }
-
-p {
-   margin: 25px;    
-}
-
-#grid-areas {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: min-content min-content;
-    padding: 3rem;
-    grid-template-areas:
-    ". h1 ."
-    "answ1 IMG answ2";
-}
-
-.answ {
-    background-color: #ffffff;
-    max-width: 400px;
-    min-width: 300px;
-    border-radius: 14px;
-    margin: 1rem auto;
-    border: 10px solid rgb(251, 68, 114);
-}
-
-
-#answ1 {
-    grid-area: answ1;
-}
-
-#answ2 {
-    grid-area: answ2;
-}
-
-#IMG {
-    max-width: 450px;
-    min-width: 250px;
-    grid-area: IMG;
-    margin: 6rem auto;
-    transition: transform 1s;
-    transition-timing-function: ease-in-out;
-}
-
-#IMG2, a {
-    max-width: 450px;
-    min-width: 250px;
-    grid-area: IMG;
-    margin: 4rem auto;
-    transition: transform 1s;
-    transition-timing-function: ease-in-out;
-
-}
-
-#IMG:hover, a:hover {
-    transform: scale(1.1);
-}
-
-
-
-/*-----------------------MEDIA QUERY 1-----------------------*/
-/*---------------------------Half-page-----------------------*/
-@media screen and (max-width: 1380px) {
-    body{
-        background-image: url("images/Background_Image_Mobile.png");
-        background-size: cover;     
-}
-
-#grid-areas {
-    grid-template-columns: auto auto;
-    grid-template-rows: min-content min-content min-content;
-    grid-template-areas:
-    "h1 h1"
-    "answ1 answ2"
-    "IMG IMG"
-}
-}
-
-
-/*-----------------------MEDIA QUERY 2-----------------------*/
-/*---------------------------iPad-----------------------*/
-
-@media screen and (max-width: 900px) {
-    #bar {
-        display:flex;
-        flex-direction: row;
-    }
-    
-    nav ul {
-        width: 100%;
-        gap: 60px;
-    }
-    
-    nav a:link, nav a:visited {
-        margin: 0px auto 0px auto;
-    }      
-    
-    nav a:hover, nav a:active {
-        margin: 0px auto 0px auto;
-    }
-  
-    #grid-areas {
-        grid-template-columns: auto auto;
-        grid-template-rows: min-content min-content min-content;
-        grid-template-areas:
-        "h1 h1"
-        "answ1 answ2"
-        "IMG IMG";
-    }   
-
-    h1 {
-        font-size:50px;
-        margin: 125px auto 40px auto;
-        text-align: center;
-    }
-    
-    .answ {
-        max-width: 300px;
-        min-width: 190px;
-        min-height: 100%;
-        margin: auto 10px auto auto;  
-        border: 8px solid rgb(251, 68, 114);
-        font-size:12px; 
-    }
-    #answ1 { 
-        margin: auto 10px auto auto;  
-    }
-
-    #answ2 {
-        margin: auto auto auto 10px;  
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        text-align: center;    
-    }
-    
-    #IMG, a { 
-        max-width: 300px; 
-        max-height: 300px;
-        margin: 30px auto 30px auto;
-    }
-    
-    #IMG:hover, a:hover {
-        transition: none;
-        transform: none;
-    }
-
-}
-
-/*-----------------------MEDIA QUERY 3-----------------------*/
-/*------------------------Android 7.0-----------------------*/
-
-@media screen and (max-width: 580px) {
-
-    #menuicon {
-        background-image: url(/images/menuIcon.png);
-        width: 60px;
-        height: 60px;
-        margin: 15px auto auto 15px;
-        display:flex;
-        cursor: pointer;
-    }
-
-    #menucheckbox ~ ul {
-        display:none;
-    }
-
-    #menucheckbox:checked ~ ul {
-        display:flex;
-    }
-    
-    
-    nav ul {
-        width: 80%;
-        margin: 10px 0px 0px auto; 
-        gap: 5px;
-    }
-
-    .navtext {
-        margin: 25px auto 0px auto;
-    }
-
-    .navtext1 {
-        margin: 25px auto 0px auto;
-    }
-        
-    nav a:link, nav a:visited {
-        padding: 15px 20px 15px 20px;
-        font-size: 100%;
-    }
-        
-    nav a:hover, nav a:active{
-        padding: 15px 20px 15px 20px;
-        font-size: 100%;;
-    }
-
-    #grid-areas {
-        grid-template-columns: auto;
-        grid-template-rows: min-content auto auto auto;
-        grid-template-areas:
-        "h1"
-        "answ1"
-        "answ2"
-        "IMG";
-    }   
-
-    h1 {     
-            
-            font-size:30px;
-            margin: 100px auto 30px auto;
-    }
-
-    .answ {
-        max-width: 250px;
-        height: auto;
-        width: 100%;
-        border-radius: 14px;
-        margin: auto auto 20px auto;
-        border: 8px solid rgb(251, 68, 114);
-        font-size:12px;
-    }
-
-    #answ1 {
-        margin: auto auto 20px auto;
-    }
-
-    #answ2 {
-        margin: 25px auto auto auto;
-        padding: 0 0 20px 0; 
-    }
-
-    h2 {
-        margin: 20px;
-    }
-
-    p{
-        margin: 20px;
-    }
-
-    #IMG, a { 
-        min-width: 50px;
-        width: 100%;
-        height: auto;
-        margin: 30px auto 10px auto;
-        padding: 20px 0 20px 0;
-    }
-}
-
-
-
-

@@ -4,60 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boxmodellen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Välkommen till Gillet</title>
     <link rel="stylesheet" href="css_U2.css">
 </head>
 
 <body>
-
-    <nav id="bar">
-        <label for="menucheckbox" id="menuicon"></label>
-        <input type="checkbox" id="menucheckbox">
-        <ul>
-            <li id="navtext1" class="thisPage navtext"> <a href="index.html"> 1 </a></li>
-
-            <li class="navtext"> <a href="Sida_2.html"> 2 </a></li>
-
-            <li class="navtext"> <a href="Sida_3.html"> 3 </a></li>
-        </ul>
-    </nav>
-
     <div id="grid-areas">
-
-        <h1>Boxmodellen</h1>
-
-        <div id="answ1" class="answ">
-            <h2> Vad är boxmodellen?</h2>
-            <p>CSS-termen box-modell används när man pratar om design och layout och består av de olika komponenterna
-                som finns för elementen i html-koden och hur de samverkar. De flesta html-elementen kan ses som lådor -
-                “boxes”, och man kan se CSS boxmodell som en box som omsluts runt varje HTML-element.
-                Längst in i boxmodellen finns innehållet.
-                Runt innehållet finns padding - den inre marginalen. Runt denna finns en kantlinje. Omsluten runt detta
-                finns marginal, som är den yttre marginalen.
-                Egenskapen width specificerar bredden på innehållet, och sen läggs padding och marginal på, för att
-                uppnå den totala bredden.
-                Egenskaperna för de olika delarna i elementets boxmodellen specificeras i CSS-kod, som stilsätter
-                elementen.
-                Man måste vara vaksam på padding och marginal i relation omgivande och inre element- om OMGIVANDE
-                ELEMENT inte har en padding (inre marginal) kommer INRE ELEMENT kant i kant med OMGIVANDE ELEMENT (även
-                om det inre elementet har en marginal.)
-                I inre element överlappar marginalen för element i höjdled, men ej i sidled!</p>
+        <div id="homeBar">
+            <ul>
+                <a href="index.html">
+                    <img id="imgLogo" src="/images/logga.png" alt="Exempel på olika slags navigation">
+                </a>
+            </ul>
         </div>
 
-        <div id="answ2" class="answ">
-            <h2> Box-sizing</h2>
-            <p>Det är viktigt att ta hänsyn till och bestämma vilken box-sizing man ska ha. Default värdet är
-                content-box, som kommer att gälla om man inte specificerar vilken box-sizing man ska ha.
-                Vid box-sizing: content-box kommer innehållet i elementet styra. Sätter man då exempelvis en bredd på
-                200 pixlar, kommer hela elementets box
-                (innehåll, padding, kantlinje, marginal) vara 200 pixlar för innehållet, och därefter kommer padding,
-                kantlinje och marginal läggas på den totala bredden. Detta kan vara svårt att arbeta med, då det inte är
-                lika lätt att styra över storlek. Ändrar man box-sizing till border-box: kommer bredd (width) innefatta
-                även border och padding. Sätter man då bredd till 200 pixlar kommer (innehåll + border + padding) vara
-                200 pixlar, och man har då margin lägga på och att ta hänsyn till när man ska bestämma storlek på
-                element som ska ligga intill varandra. </p>
+        <div>
+            <img id="header" src="/images/header.png" alt="Boxmodell">
+            <div id="memberButton"><a href="bliMedlem.html"> KNAPP FÖR BLI MEDLEM </a></div>
         </div>
-        <img id="IMG" src="/images/boxModel_Image.png" alt="Boxmodell">
+
+        <nav id="globalBar">
+
+            <label for="menuCheckBox" id="menuIcon"></label>
+            <input type="checkBox" id="menuCheckBox">
+
+            <ul>
+                <li class="navText"> <a href="omOss.html"> Om oss </a></li>
+
+                <li class="navText"> <a href="kontakt.html"> Kontakt </a></li>
+
+                <li class="navText"> <a href="aktiviteter.html"> Aktiviteter </a></li>
+
+                <li class="navText"> <a href="sammarbeten.html"> Sammarbeten </a></li>
+
+                <li id="socialMediaBox">
+                    <img id="imgFacebook" src="/images/facebook.png" alt="facebook">
+                    <img id="imgInstagram" src="/images/instagram.png" alt="instagram">
+                </li>
+            </ul>
+        </nav>
+
+        <div class="asideRight">
+            <div id="påGång">
+                <h2> På gång!</h2>
+                <p>Vi har aktiviteter denna tid!</p>
+            </div>
+
+            <div id="besök">
+                <h2> Besök oss!</h2>
+                <p>Vi finns här!</p>
+            </div>
+
+            <div id="prataMedOss">
+                <h2>Prata med oss!</h2>
+                <p>Discord</p>
+            </div>
+        </div>
+
+        <div id="välkommenMainText">
+            <h2> Välkommen till Gillet!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla amet iste aspernatur
+                consequatur, explicabo perferendis, eligendi dolor suscipit fugit excepturi! Commodi nesciunt autem
+                debitis quae tempora, tenetur corporis sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic dolor nostrum at nihil quos eveniet perspiciatis sapiente ex maxime eaque quod cumque illo,
+                laboriosam ab impedit inventore, veniam fugiat incidunt!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus recusandae, temporibus
+                consequuntur labore dicta necessitatibus porro iure sed exercitationem aliquid quia quae rem
+                nesciunt veniam soluta maiores, error illum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas autem suscipit inventore
+                blanditiis corporis! Ad sequi culpa, doloribus illum id, commodi quas ratione dolores excepturi
+                cupiditate, sapiente quo iusto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                repudiandae quo! Quibusdam obcaecati voluptatum sunt, minima nobis, ut reprehenderit temporibus
+                laudantium odio facere doloribus, maiores officiis fuga aspernatur provident quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla amet iste aspernatur
+                consequatur, explicabo perferendis, eligendi dolor suscipit fugit excepturi! Commodi nesciunt autem
+                debitis quae tempora, tenetur corporis sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic dolor nostrum at nihil quos eveniet perspiciatis sapiente ex maxime eaque quod cumque illo,
+                laboriosam ab impedit inventore, veniam fugiat incidunt!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus recusandae, temporibus
+                consequuntur labore dicta necessitatibus porro iure sed exercitationem aliquid quia quae rem
+                nesciunt veniam soluta maiores, error illum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas autem suscipit inventore
+                blanditiis corporis! Ad sequi culpa, doloribus illum id, commodi quas ratione dolores excepturi
+                cupiditate, sapiente quo iusto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                repudiandae quo! Quibusdam obcaecati voluptatum sunt, minima nobis, ut reprehenderit temporibus
+                laudantium odio facere doloribus, maiores officiis fuga aspernatur provident quisquam.
+            </p>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <h2>Här ska det vara en footer</h2>
+                <p>Här ska det stå att det är en fejksida + armagedon + länk</p>
+            </footer>
+        </div>
     </div>
 
 </body>
