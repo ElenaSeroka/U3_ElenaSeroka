@@ -35,30 +35,8 @@ body {
 
 
 /*
-#memberButton{
-    display: none;
-}
 
 
-#menuCheckBox {
-    display:none;
-}
- 
-
-
-#påGång, #besök, #prataMedOss{
-    background-color: #faf6f6;
-    height: 150px;
-    border-radius: 5px;
-}
-
-
-
-#välkommenMainText, #omOssMainText{
-line-height: 2.5rem;
-grid-area: textBox;
-
-}
 
 
 } */
@@ -109,9 +87,7 @@ nav a:hover, nav a:active {
     font-size: 30px;
 }
 
-.navtext {
-    margin: 10px 0px 10px 0px;
-}
+
 
 .navtext1{
     margin: 10px 0px 10px 10px;
@@ -133,9 +109,7 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    margin: 25px;
- }
+
 
 p {
    margin: 25px;    
