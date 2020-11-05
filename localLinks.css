@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+html {
+    font-size: 16px;
+}
+
+html, body, div {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+
+#grid-areas {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: min-content auto auto;
+    grid-template-rows: min-content auto auto min-content min-content;
+    grid-template-areas:
+    "homeBar homeBar homeBar"
+    "header header header"
+    "globalBar globalBar globalBar"
+    "textBox textBox textBox"
+    "footer footer footer";
+}
+
+#homeBar {
+    grid-area: homeBar;
+    background-color: rgb(156, 40, 40);
+    position: fixed;
+    min-width: 100%;
+    height: 115px;
+    top: 0;
+    z-index: 100;   
+}
+
+#homeBarComponents{
+display:flex;
+flex-direction: row;
+gap: 0px;
+}
+
+#imgLogo{
+width:100px;
+margin: auto auto auto auto;
+}
+
+#name{
+    width:400px;
+    margin: auto auto auto 0px;
+}
+
+#imgFacebook, #imgInstagram{
+width: 80px;    
+}
+
+#imgInstagram{
+    margin: 10px 5px auto auto;
+}
+
+#header {
+    margin: auto;
+    grid-area: header;
+    margin-top: 115px;
+}
+
+#globalBar {
+    background-color: rgb(77, 69, 62);
+    transform: translateY(-6px);
+    min-width: 100%;
+    height: 70px;
+    grid-area: globalBar;
+    z-index: 10;
+    position: relative;
+  display: inline-block;
+
+   
+}
+
+/* ----------yttre listan----------------*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px; 
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    font-size: 40px;
+    position: relative;
+    color: black;
+}
+
+/* ----------inre listan----------------*/
+nav ul ul {
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    color: black; 
+    min-width: 100px; 
+}
+
+nav ul li:hover ul {
+    display: flex; 
+    visibility: visible;
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    text-align: right;
+    margin: auto;
+    padding: 0 10px 4px 10px;
+}
+
+nav > a:link, nav a:visited {
+    background-color:  rgb(77, 69, 62);
+    color: black;
+    
+}
+
+ nav > a:link/*, nav a:hover*/ { 
+    background-color:  rgb(53, 49, 45);
+    color: black;
+}
+
+nav ul ul a:link {
+    background-color: rgb(77, 69, 62);
+}
+nav ul ul {
+    background-color: rgb(77, 69, 62);
+}
+
+nav ul ul li {
+   font-size: 28px;
+   padding: 10px;
+}
+
+.kalendarium{
+    margin: auto auto auto 50px;
+    max-width: 1000px;
+}
+
+#valkommenMainText {
+grid-area: textBox;
+line-height: 2.5rem;
+font-size: 1.5rem;
+max-width: 1100px;
+margin: auto auto 50px auto;
+padding: auto 20px auto 20px;
+}
+
+h2 {
+font-size: 4rem;
+line-height: 6rem;
+margin: 20px auto auto auto;
+text-align: center;
+}
+
+footer{
+  
+    background-color: rgb(141, 46, 46);
+    grid-area: footer;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer p, h3{
+    text-align:center
+}
+
+#påGång
+{
+    margin:50px auto 50px auto;
+    padding: 0px 15px 0px 15px;
+    background-color: aliceblue;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+#imgFooter {
+    max-width: 100px;
+    margin: auto auto auto 100px;
+}
