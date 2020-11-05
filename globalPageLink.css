@@ -49,7 +49,7 @@ list-style: none;
 
 #imgLogo{
     width:100px;
-    margin: auto auto auto 5px;
+    margin: auto auto auto auto;
 }
 
 #name{
