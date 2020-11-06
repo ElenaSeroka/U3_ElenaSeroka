@@ -176,7 +176,7 @@ footer p, h3{
     text-align:center;
 }
 
-#påGång
+.påGång
 {
     margin:50px auto 50px auto;
     padding: 0px 15px 0px 15px;
@@ -187,7 +187,7 @@ footer p, h3{
     line-height: normal;
 }
 
-#imgFooter {
+.imgFooter {
     max-width: 100px;
     margin: auto auto auto 85px;
 }
