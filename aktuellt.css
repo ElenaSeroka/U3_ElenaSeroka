@@ -20,13 +20,14 @@ body {
     display: grid;
     gap: 0px;
     grid-template-columns: min-content auto auto;
-    grid-template-rows: min-content auto auto min-content min-content;
+    grid-template-rows: min-content auto auto  auto min-content min-content;
     grid-template-areas:
     "homeBar homeBar homeBar"
+    "header header header"
     "globalBar globalBar globalBar"
-    "localImage localImage localImage"
-    "localBar localBar localBar"
+    
     "textBox textBox textBox"
+    " localBar localBar localBar"
     "footer footer footer";
 }
 
@@ -44,12 +45,11 @@ body {
 display:flex;
 flex-direction: row;
 gap: 0px;
-list-style: none;
 }
 
 #imgLogo{
-    width:100px;
-    margin: auto auto auto auto;
+width:100px;
+margin: auto auto auto auto;
 }
 
 #name{
@@ -61,18 +61,19 @@ list-style: none;
 width: 80px;    
 }
 
-#imgFacebook {
-    margin: auto auto auto 390px;
-}
-
 #imgInstagram{
     margin: 10px 5px auto auto;
 }
 
+#header {
+    margin: auto;
+    grid-area: header;
+    margin-top: 115px;
+}
 
 #globalBar {
     background-color: rgb(77, 69, 62);
-    transform: translateY(115px);
+    transform: translateY(-6px);
     min-width: 100%;
     height: 70px;
     grid-area: globalBar;
@@ -83,25 +84,8 @@ width: 80px;
    
 }
 
-.localImage {
-    grid-area: localImage;
-    width: 1000px;
-}
-
-#localBar {
-    background-color: rgb(190, 93, 9);
-    height: 70px;
-    grid-area: localBar;
-    z-index: 10;
-    position: relative;
-  display: inline-block;
-
-   
-}
-
-
 /* ----------yttre listan----------------*/
-#globalBar nav ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 10px; 
@@ -114,7 +98,7 @@ width: 80px;
 }
 
 /* ----------inre listan----------------*/
-#globalBar nav ul ul {
+nav ul ul {
     flex-direction: column;
     visibility: hidden;
     position: absolute;
@@ -122,13 +106,13 @@ width: 80px;
     min-width: 100px; 
 }
 
-#globalBar nav ul li:hover ul {
+nav ul li:hover ul {
     display: flex; 
     visibility: visible;
     color: black;
 }
 
-#globalBar nav a {
+nav a {
     text-decoration: none;
     color: black;
     text-align: right;
@@ -136,101 +120,52 @@ width: 80px;
     padding: 0 10px 4px 10px;
 }
 
-#globalBar nav > a:link, nav a:visited {
+nav > a:link, nav a:visited {
     background-color:  rgb(77, 69, 62);
     color: black;
     
 }
 
-#globalBar nav > a:link/*, nav a:hover*/ { 
+ nav > a:link/*, nav a:hover*/ { 
     background-color:  rgb(53, 49, 45);
     color: black;
 }
 
-#globalBar nav ul ul a:link {
+nav ul ul a:link {
     background-color: rgb(77, 69, 62);
 }
-#globalBar nav ul ul {
+nav ul ul {
     background-color: rgb(77, 69, 62);
 }
 
-#globalBar nav ul ul li {
+nav ul ul li {
    font-size: 28px;
    padding: 10px;
 }
 
+.kalendarium{
+    margin: auto auto auto 50px;
+    max-width: 1000px;
+}
 
-
-/* ----------yttre listan----------------*/
-#localBar nav ul {
-    list-style: none;
-    min-width: 1300px;
-    margin: 0;
-    padding: 10px 0px 10px 0px; 
-    display:flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    font-size: 40px;
+#localBar {
+    background-color: rgb(77, 69, 62);
+    transform: translateY(-6px);
+    min-width: 100%;
+    height: 70px;
+    grid-area: localBar;
+    z-index: 10;
     position: relative;
-    color: black;
+  display: inline-block;
 }
-
-/* ----------inre listan----------------*/
-#localBar nav ul ul {
-    flex-direction: column;
-    visibility: hidden;
-    position: absolute;
-    color: black; 
-    min-width: 100px; 
-}
-
-#localBar nav ul li:hover ul {
-    display: flex; 
-    visibility: visible;
-    color: black;
-}
-
-#localBar nav a {
-    text-decoration: none;
-    color: black;
-    text-align: right;
-    margin: auto;
-    padding: 0 10px 4px 10px;
-}
-
-#globlocalBaralBar nav > a:link, nav a:visited {
-    background-color:  rgb(77, 69, 62);
-    color: black;
-    
-}
-
-#localBar nav > a:link/*, nav a:hover*/ { 
-    background-color:  rgb(53, 49, 45);
-    color: black;
-}
-
-#localBar nav ul ul a:link {
-    background-color: rgb(77, 69, 62);
-}
-#localBar nav ul ul {
-    background-color: rgb(143, 73, 11);
-}
-
-#localBar nav ul ul li {
-   font-size: 28px;
-   padding: 10px;
-}
-
-
 
 #valkommenMainText {
-    background-color: antiquewhite;
 grid-area: textBox;
 line-height: 2.5rem;
 font-size: 1.5rem;
-max-width: 1300px;
-min-width: 1300px;
+max-width: 1100px;
 margin: auto auto 50px auto;
+padding: auto 20px auto 20px;
 }
 
 h2 {
