@@ -87,6 +87,58 @@
             <p>Har du frågor? Vill du bli medlem? Vill du starta något, eller letar du efter din nästa rollspelsgrupp?
                 Kontakta oss!
             </p>
+
+            <form id="kontaktformular" method="POST" data-netlify="true">
+                <fieldset id="username">
+                    <legend></legend>
+                    <div>
+                        <p class="formp">Ditt namn (obligatoriskt)</p>
+                        <label for="fname"> </label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="useremail">
+                    <legend> </legend>
+                    <div>
+                        <p class="formp">Din email (obligatoriskt)</p>
+
+                        <label for="email"> </label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset id="writtensubject">
+                    <legend> </legend>
+                    <div>
+                        <p class="formp">Ämne</p>
+                        <label for="usersubject"> </label>
+                        <input type="text" id="usersubject" name="usersubject">
+                    </div>
+
+
+
+                </fieldset>
+
+
+                <fieldset id="messagebox">
+                    <legend> </legend>
+                    <div>
+                        <p class="formp">Meddelande</p>
+                        <textarea id="writemessage" name="writemessage" rows="4" cols="50"> </textarea>
+
+                    </div>
+
+
+                </fieldset>
+
+                <div id="send">
+                    <input type="submit" id="button" value="Skicka meddelande">
+                </div>
+
+            </form>
         </div>
 
 
